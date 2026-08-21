@@ -1,0 +1,12 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        dic = {}
+        for n in nums:
+            dic[n] = dic.get(n, 0) + 1
+            if dic[n] > 1:
+                return True
+        
+        return False
+
+        # T: O(n)
+        # S: O(n)
